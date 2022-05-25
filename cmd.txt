@@ -1,0 +1,5 @@
+packer build ubuntu.json
+packer validate ubuntu.json
+packer inspect ubuntu.json
+
+packer build -var "aws_access_key=key" -var "aws_secret_key=id" ubuntu.json
