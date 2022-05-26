@@ -1,0 +1,17 @@
+---
+-
+  become: true
+  hosts: ubuntu
+  post_tasks:
+    -
+      copy: "src=../files/website/ dest=/usr/share/nginx/html/ mode=0644"
+      name: "Upload website files"
+    -
+      name: "Allow all access to tcp port 80"
+      ufw:
+        port: 80
+        proto: tcp
+        rule: allow
+  roles:
+    -
+      role: nginxinc.nginx

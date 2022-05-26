@@ -1,0 +1,5 @@
+install Ansible packer awscli
+
+configure cli
+ansible-galaxy install -r requirements.yml
+packer build ubuntu.json

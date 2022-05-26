@@ -1,0 +1,5 @@
+install awscli
+apt install awscli
+run aws configure
+add key and region
+packer build ubuntu.json
